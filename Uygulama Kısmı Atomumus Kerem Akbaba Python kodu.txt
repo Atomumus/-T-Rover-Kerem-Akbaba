@@ -1,0 +1,19 @@
+import bz2
+
+compressed_hex="425a6839314159265359138411dd00000001003f00200021800c032729dc5dc914e142404e104774"
+
+compressed_data=bytes.fromhex("compressed_hex")
+
+
+main_data=bz2.decompress(compressed_data).decode
+
+print("Main data :" main_data)
+
+from collections import counter
+
+import rospy
+from std_msgs.msg import Char
+
+def find_most_common_character():
+    
+ #devamı yetişmedi hocam
